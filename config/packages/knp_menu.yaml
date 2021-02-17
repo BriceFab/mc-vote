@@ -1,0 +1,7 @@
+knp_menu:
+  twig:
+    template: 'components/menu/templates/knp_menu.html.twig'
+  templating: false
+  default_renderer: twig
+  providers:
+    builder_alias: false    # disable the builder-alias-based provider

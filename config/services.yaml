@@ -1,0 +1,53 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+imports:
+    - { resource: './parameters.yaml' }
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/DependencyInjection/'
+            - '../src/Entity/'
+            - '../src/Kernel.php'
+            - '../src/Tests/'
+
+    # controllers are imported separately to make sure services can be injected
+    # as action arguments even if you don't extend any base controller class
+    App\Controller\:
+        resource: '../src/Controller/'
+        tags: ['controller.service_arguments']
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+    App\EventSubscriber\EntitySubscriber:
+        tags:
+            - { name: 'doctrine.event_subscriber' }
+
+    app.menu_service:
+        alias: App\Service\MenuService
+        public: true
+
+    app.menu_builder:
+        class: App\Menu\MenuBuilder
+        arguments: [ "@knp_menu.factory" ]
+        tags:
+            - { name: knp_menu.menu_builder, method: createMainMenuLeft, alias: mainLeft }
+            - { name: knp_menu.menu_builder, method: createMainMenuRight, alias: mainRight }
+
+    app.menu_provider:
+        class: App\Provider\DatabaseMenuProvider
+        tags:
+            - { name: knp_menu.provider }
+
+    database_menu.factory:
+        class: App\Menu\DatabaseMenuFactory
+        arguments: [ "@knp_menu.factory_extension.routing", "%database_menu.menu_item_entity%" ]
+        public: true

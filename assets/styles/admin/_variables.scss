@@ -1,0 +1,84 @@
+/* ----------------------------------------------------------------------------
+   This file defines the CSS variables used in the backend design.
+   Most of the times, overriding some of these variables is all you need to
+   customize the design of your backends. However, because of how Bootstrap 3
+   works, some styles can't be customized with CSS variables and you'll need
+   to also customize the Sass variables defined in variables.scss.
+ --------------------------------------------------------------------------- */
+@import "../variables";
+
+:root {
+  --body-max-width: 1440px;
+  --sidebar-max-width: 190px;
+
+  --font-family-sans-serif: #{$font-family-sans-serif};
+  --font-family-monospace: #{$font-family-monospace};
+  --font-family-base: #{$font-family-base};
+
+  --font-size-base: #{$font-size-base};
+  --font-size-xl: #{$font-size-xl};
+  --font-size-lg: #{$font-size-lg};
+  --font-size-sm: #{$font-size-sm};
+  --font-size-xs: #{$font-size-xs};
+
+  --body-bg: #{$body-bg};
+  --text-color: #{text-color};
+  --text-color-dark: #{$text-color-dark};
+  --text-color-light: #{$text-color-light};
+  --box-shadow-lg: #{$box-shadow-lg};
+  --content-panel-bg: #{$content-panel-bg};
+  --form-bg: #{$form-bg};
+  --table-header-bg: #{$table-header-bg};
+  --table-footer-bg: #{$table-footer-bg};
+  --fieldset-bg: #{$fieldset-bg};
+
+  --zindex-700: 777;
+  --zindex-800: 888;
+  --zindex-900: 999;
+  --zindex-1050: 1050;
+
+  --white: hsl(0, 0%, 100%);
+  --gray-50: hsl(210, 17%, 98%);
+  --gray-100: hsl(210, 17%, 95%);
+  --gray-200: hsl(210, 16%, 93%);
+  --gray-300: hsl(210, 14%, 89%);
+  --gray-400: hsl(210, 14%, 83%);
+  --gray-500: hsl(210, 11%, 71%);
+  --gray-600: hsl(210, 7%, 56%);
+  --gray-700: hsl(210, 9%, 31%);
+  --gray-800: hsl(210, 10%, 23%);
+  --gray-900: hsl(213, 12%, 15%);
+  --black: hsl(0, 0%, 0%);
+
+  --blue-100: hsl(189, 82%, 86%);
+  --green-100: hsl(117, 66%, 86%);
+  --indigo-100: hsl(208, 100%, 91%);
+  --red-100: hsl(9, 89%, 92%);
+  --yellow-100: hsl(42, 82%, 84%);
+
+  --text-blue-600: hsl(206, 91%, 30%);
+  --text-green-600: hsl(159, 75%, 21%);
+  --text-indigo-600: hsl(231, 48%, 45%);
+  --text-red-600: hsl(338, 71%, 37%);
+  --text-yellow-600: hsl(20, 94%, 30%);
+
+  --color-primary: #{$color-primary};
+  --color-success: #{$color-success};
+  --color-info: #{$color-info};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+
+  --highlight-bg: #{$highlight-bg};
+
+  --text-on-primary: var(--white);
+  --text-muted: var(--gray-500);
+
+  --link-color: #{$link-color};
+  --link-hover-color: #{$link-hover-color};
+  --link-hover-decoration: #{$link-hover-decoration};
+
+  --border-radius: 4px;
+  --border-width: 1px;
+  --border-style: solid;
+  --border-color: hsl(213, 24%, 91%);
+}

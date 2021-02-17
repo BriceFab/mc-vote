@@ -1,0 +1,17 @@
+{#{{ knp_menu_render('main') }}#}
+{% include "components/menu/center_menu.html.twig" %}
+
+{#<ol class="breadcrumb">#}
+{#    {% for breadcrumb_item in knp_menu_get_breadcrumbs_array(knp_menu_get_current_item('main')) %}#}
+{#        {% if not loop.last %}#}
+{#            <li><a href="{{ breadcrumb_item.uri }}">{{ breadcrumb_item.label }}</a></li>#}
+{#        {% else %}#}
+{#            <li class="active">{{ breadcrumb_item.label }}</li>#}
+{#        {% endif %}#}
+{#    {% endfor %}#}
+{#</ol>#}
+
+{#{{ dump(knp_menu_get('main')) }}#}
+{#{{ dump(knp_menu_get_current_item('main')) }}#}
+{#{{ dump(knp_menu_get_breadcrumbs_array(knp_menu_get_current_item('main'))) }}#}
+

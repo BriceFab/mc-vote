@@ -1,0 +1,43 @@
+{% extends '@!EasyAdmin/layout.html.twig' %}
+
+{% set a_header_menu = getParameter(constant('App\\Classes\\Enum\\EnumParamKey::ADMIN_HEADER_MENU')) %}
+
+{% block head_stylesheets %}
+    {{ parent() }}
+
+    {% if a_header_menu %}
+        <style>
+            .wrapper {
+                margin-top: 0;
+            }
+        </style>
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {{ parent() }}
+
+    {{ block('js_variables') }}
+{% endblock %}
+
+{% block js_variables %}
+    {# Ajouter les variables ici #}
+{% endblock %}
+
+{% block wrapper_wrapper %}
+    {% if a_header_menu %}
+        {% block menu %}
+            {% include "components/menu/menu.html.twig" %}
+        {% endblock %}
+    {% endif %}
+
+    {{ parent() }}
+{% endblock %}
+
+{% block header %}
+    {% if a_header_menu %}
+        {# N'affiche rien #}
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}

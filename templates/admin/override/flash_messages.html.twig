@@ -1,0 +1,7 @@
+{% if app.session is not null and app.session.started %}
+    {% set flash_messages = app.session.flashbag.all %}
+
+    {% if flash_messages|length > 0 %}
+        <div id="toasts" data-toasts="{{ flash_messages|json_encode }}"></div>
+    {% endif %}
+{% endif %}

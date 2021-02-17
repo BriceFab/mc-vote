@@ -1,0 +1,32 @@
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+$font-size-base: 0.875rem; /* 14px */
+$font-size-xl: 1.125rem; /* 18px */
+$font-size-lg: 1rem; /* 16px */
+$font-size-sm: 0.8125rem; /* 13px */
+$font-size-xs: 0.75rem; /* 12px */
+
+$body-bg: hsl(220, 20%, 91%);
+$text-color: hsl(225, 15%, 35%);
+$text-color-dark: hsl(229, 24%, 21%);
+$text-color-light: hsl(215, 14%, 67%);
+$box-shadow-lg: 0 7px 14px 0 hsla(231, 23%, 30%, .1), 0 3px 6px 0 hsla(0, 0%, 0%, .07);
+$content-panel-bg: hsl(210, 45%, 98%);
+$form-bg: hsl(210, 45%, 98%);
+$table-header-bg: hsl(210, 40%, 95%);
+$table-footer-bg: hsl(210, 45%, 98%);
+$fieldset-bg: hsl(210, 30%, 97%);
+
+$color-primary: hsl(230, 55%, 60%);
+$color-success: hsl(157, 69%, 38%);
+$color-info: hsl(201, 94%, 37%);
+$color-warning: hsl(30, 81%, 47%);
+$color-danger: hsl(344, 59%, 52%);
+
+$highlight-bg: hsl(42, 82%, 85%);
+
+$link-color: hsl(230, 60%, 60%);
+$link-hover-color: hsl(230, 60%, 75%);
+$link-hover-decoration: none;

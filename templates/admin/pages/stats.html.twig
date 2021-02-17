@@ -1,0 +1,38 @@
+{% extends 'admin/override/layout.html.twig' %}
+
+{% block main %}
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-3 col-md-6">
+                <div class="card card-stats">
+                    <!-- Users stats -->
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col">
+                                <h5 class="card-title text-uppercase text-muted mb-0">Utilisateurs</h5>
+                                <span class="h2 font-weight-bold mb-0">{{ total_users_confirmed }}/{{ total_users }} <span
+                                            class="h5">confirmés</span></span><br/>
+                            </div>
+                            <div class="col-auto">
+                                <div class="icon icon-shape bg-gradient-red text-white rounded-circle shadow">
+                                    <i class="ni ni-active-40"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-3 mb-0 text-sm">
+                            {% set monthly_users_percent = (monthly_users * 100 / total_users)|round %}
+                            {% set monthly_success = monthly_users_percent >= monthy_new_register_users_goal %}
+                            <span class="text-{{ monthly_success ? 'success':'danger' }} mr-2">
+                        <i class="fa fa-arrow-{{ monthly_success ? 'up':'down' }}"></i>
+                        {{ monthly_users_percent }}% (+{{ monthly_users }})
+                        </span>
+                            <span class="text-nowrap">Ce mois-ci</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

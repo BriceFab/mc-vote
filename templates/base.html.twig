@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+            {{ encore_entry_link_tags('toast') }}
+        {% endblock %}
+
+        {% block head_javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        {% block menu %}
+            {% include "components/menu/menu.html.twig" %}
+        {% endblock %}
+
+        {% block body %}{% endblock %}
+
+        {% block js_variables %}
+            <div id="toasts" data-toasts="{{ app.flashes|json_encode }}"></div>
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+            {{ encore_entry_script_tags('toast') }}
+        {% endblock %}
+    </body>
+</html>

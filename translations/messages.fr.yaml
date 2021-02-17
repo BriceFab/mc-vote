@@ -1,0 +1,19 @@
+ROLE_USER: Utilisateur
+ROLE_ADMIN: Administrateur
+admin.action.ajouter: Ajouter
+admin.action.modifier: Modifier
+admin.action.supprimer: Supprimer
+admin.action.detail: Voir
+user.username: Nom d'utilisateur
+user.email: Adresse email
+user.password: Mot de passe
+user.password.confirm: Confirmer le mot de passe
+action.enregistrer: Enregistrer
+action.register: S'inscrire
+user.password.must_match: Les mot de passes doivent être identiques
+action.send_email.error: Une erreur est survenue lors de l'envoie de l'email
+user.account.verified_success: Votre compte a été vérifié avec succès
+email.subject.verify_register: Vérification de l'inscription
+user.account.verified_already: Votre compte est déjà vérifié
+user.already.logged: Vous êtes déjà connecté
+action.send_email.register: Consulter vos emails pour confirmer l'inscription. Pensez à regarder aussi dans les SPAMS

@@ -1,0 +1,6 @@
+ROLE_USER: User
+ROLE_ADMIN: Administrator
+admin.action.ajouter: Add
+admin.action.modifier: Edit
+admin.action.supprimer: Delete
+admin.action.detail: Show

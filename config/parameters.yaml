@@ -1,0 +1,10 @@
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
+parameters:
+  APP_ENV: "%env(APP_ENV)%"
+  ADMIN_PATH: "%env(ADMIN_PATH)%"
+  MAILER_SENDER: "%env(MAILER_SENDER)%"
+  MAILER_SENDER_NAME: "%env(MAILER_SENDER_NAME)%"
+  USER_VERIFICATION_EMAIL: "%env(bool:USER_VERIFICATION_EMAIL)%"
+  path_upload_params: /uploads/params
+  database_menu.menu_item_entity: App\Entity\MenuItem
